@@ -1,0 +1,75 @@
+<form class="formClient mt-3" [formGroup]="formClient">
+  <div *ngIf="showForm">
+    <div class="container">
+      <h4 class="text-secondary pt-3"> 1. Inscripción punto de venta </h4>
+      <div class="mb-3">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          formControlName="name" placeholder="Nombre del cliente">
+        <p class="text-danger" *ngIf="formClient.get('name')!.invalid && formClient.get('name')!.touched">campo "Nombre
+          del cliente" es requerido</p>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          formControlName="nit" placeholder="NIT">
+        <p class="text-danger" *ngIf="formClient.get('nit')!.invalid && formClient.get('nit')!.touched">campo "NIT" es
+          requerido</p>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          formControlName="name_location" placeholder="Nombre del punto">
+        <p class="text-danger"
+          *ngIf="formClient.get('name_location')!.invalid && formClient.get('name_location')!.touched">Este campo no
+          debe
+          de tener carácteres especiales</p>
+
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          formControlName="name_team" placeholder="Nombre del equipo">
+        <p class="text-danger" *ngIf="formClient.get('name_team')!.invalid && formClient.get('name_team')!.touched">Este
+          campo no debe de tener carácteres especiales</p>
+
+      </div>
+      <div class="mb-3">
+        <select class="form-select text-secondary" formControlName="city">
+          <option value="" disabled selected>Ciudad</option>
+          <option value='Bogotá'>Bogotá</option>
+          <option value='Medellín'>Medellín</option>
+          <option value='Cali'>Cali</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          formControlName="promoter" placeholder="Promotor">
+        <p class="text-danger" *ngIf="formClient.get('promoter')!.invalid && formClient.get('promoter')!.touched">Este
+          campo no debe de tener carácteres especiales</p>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="RTC"
+          formControlName="rtc">
+        <p class="text-danger" *ngIf="formClient.get('rtc')!.invalid && formClient.get('rtc')!.touched">campo "RTC" debe
+          ser númerico</p>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          formControlName="cap_user" placeholder="Capitán y/o Usuario (Solo minúsculas)">
+        <p class="text-danger" *ngIf="formClient.get('cap_user')!.invalid && formClient.get('cap_user')!.touched">Este
+          campo no debe de tener carácteres especiales</p>
+
+      </div>
+      <div class="mb-3 chack">
+        <input type="checkbox" class="form-check-input col-sm-1" id="exampleCheck1" formControlName="cb">
+        <label class="form-check-label color1 col-sm-7" for="exampleCheck1"> He leído y acepto las politicas de
+          Tratamientos de
+          Datos Personales. Conoce los términos y condiciones</label>
+      </div>
+      <button type="submit" class="btnsub mb-3" [disabled]="!formClient.valid" (click)="save()">Siguiente</button>
+    </div>
+  </div>
+  <div *ngIf="!showForm" class="finalForm text-secondary">
+    <div class="container">
+      <h1>Gracias.</h1>
+      <p>Julián Vargas S.</p>
+    </div>
+  </div>
+</form>

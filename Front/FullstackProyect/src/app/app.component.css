@@ -1,0 +1,23 @@
+.background {   
+    background-repeat: no-repeat;
+    background-image: url('../images/TEXTURAS.png'), 
+    url('../images/concurso-pto-venta-halloween-2-fondo.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 45em;
+    width: 95.2em;
+}
+
+.cover1{
+    background-image: url('../images/KV.png');
+    background-size: 32em;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: 15% center;
+    background-attachment: fixed;
+}
+
+.one{
+    height: 100%;
+}

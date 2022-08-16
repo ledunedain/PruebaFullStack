@@ -1,0 +1,39 @@
+.formClient{
+    background-color: #EDEFF1;
+    width: 420px;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 5%;  
+}
+
+.color1{
+    color: #49157E;
+}
+
+.btnsub{
+    background-color: #49157E;
+    color: white;
+    width: 200px;
+    height: 35px;
+    border-radius: 15px;
+    margin-left: 20%;
+}
+
+.container{
+    margin-top: 5px;
+}
+
+.chack{
+    display: flex; 
+    align-items: center;
+    margin-left: 40px;
+}
+.form-check-label{
+    margin-left: 5%;
+}
+
+.finalForm{
+    display: flex; 
+    align-items: center;
+    text-align: center;
+}
