@@ -34,9 +34,10 @@ export class FormClientComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get<{ ip: string; }>('https://jsonip.com')
+    this.http.get<{ ip: string; }>('http://api.ipify.org/?format=json')
       .subscribe(data => {
         this.ipAddress = data.ip;
+        
       })
   }
 
